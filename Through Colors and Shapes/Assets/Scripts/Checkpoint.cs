@@ -15,7 +15,7 @@ public class Checkpoint : MonoBehaviour
     void Update()
     {
         if(PlayerState.checkPlayerDead()){
-            player.position = PlayerState.getRespawnPoint();
+            player.transform.position = PlayerState.getRespawnPoint();
         }
     }
 }

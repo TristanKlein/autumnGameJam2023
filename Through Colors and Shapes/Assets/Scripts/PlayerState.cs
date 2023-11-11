@@ -5,7 +5,7 @@ using UnityEngine;
 public static class PlayerState
 {
     public static bool isDead = false;
-    public static Vector2 respawn = (0,0);
+    public static Vector2 respawn = new Vector2(0,0);
 
     public static bool checkPlayerDead(){
         return isDead;
