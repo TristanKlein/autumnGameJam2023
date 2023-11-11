@@ -8,8 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public float Move;
     public float jump;
     private Rigidbody2D rb;
-    private int numJumps = 1;
-    private int maxJumps = 1;
+    public int numJumps = 1;
+    public int maxJumps = 1;
     // Start is called before the first frame update
     void Start()
     {
