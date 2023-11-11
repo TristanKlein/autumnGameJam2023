@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public float Move;
     public float jump;
     private Rigidbody2D rb;
+    private int numJumps = 1;
+    private int maxJumps = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +21,12 @@ public class PlayerMovement : MonoBehaviour
     {
         Move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(speed * Move, rb.velocity.y);
-        if(Input.GetAxis("Vertical") > 0){
-            rb.AddForce(new Vector2(rb.velocity.x, jump));
-        }else{
-            rb.AddForce(new Vector2(rb.velocity.x, -jump));
+        if(Input.GetButtonDown("Jump") && numJumps > 0){
+            rb.velocity = new Vector2(rb.velocity.x, jump);
+            numJumps -= 1;
+        }
+        if(Input.GetAxis("Vertical") == 0){
+            numJumps = maxJumps;
         }
     }
 }
