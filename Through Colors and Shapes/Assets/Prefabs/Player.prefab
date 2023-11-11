@@ -102,6 +102,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -170,7 +171,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21cc08e1ca6d3a42824bdd4d7efbe6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 7
   Move: 0
+<<<<<<< HEAD
   jump: 10
+=======
+  jump: 7
+>>>>>>> 45d9950823de95bd587a069ff4d07dcfb609f2c3
   numJumps: 1
   maxJumps: 1
