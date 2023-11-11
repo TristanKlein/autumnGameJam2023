@@ -25,8 +25,9 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jump);
             numJumps -= 1;
         }
-        if(Input.GetAxis("Vertical") == 0){
-            numJumps = maxJumps;
-        }
+    }
+
+    void OnCollisionEnter2D(Collision2D col) {
+        numJumps = maxJumps;
     }
 }
